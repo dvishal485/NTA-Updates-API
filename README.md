@@ -2,6 +2,9 @@
 JEE Updates API written in javascript to fetch latest data from [JEE Mains Website](https://jeemain.nta.nic.in/webinfo2021)
 
 # Usage
+
+![Guide for API Links](https://github.com/dvishal485/JEE-Updates-API/blob/main/guide.jpg?raw=true)
+
 - Current Events
     - This usually contains the current ongoing events
     - API Link :
@@ -59,3 +62,8 @@ JEE Updates API written in javascript to fetch latest data from [JEE Mains Websi
   ]
 }
 ```
+### Note
+The API is hosted with Cloudflare Worker and have a limit to its maximum ussage, do not misuse the API.
+
+### Acknowledgement
+- A special thanks to [@cyberboysumanjay's Repo](https://github.com/cyberboysumanjay/amazon-scraper) which inspired me for the project
