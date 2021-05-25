@@ -1,6 +1,6 @@
 const getUpdates = async (factor) => {
-
-    const jeeWebsite = await (await fetch(`https://jeemain.nta.nic.in/webinfo2021`)).text()
+    const url = `https://jeemain.nta.nic.in/webinfo2021`
+    const jeeWebsite = await (await fetch(url)).text()
     var SideBar = jeeWebsite.split('<nav id="sidebar">')
     var i, result = [];
     if (factor == 'events') {
@@ -20,7 +20,7 @@ const getUpdates = async (factor) => {
             } catch (err) { }
         }
 
-    }else if (factor == 'news') {
+    } else if (factor == 'news') {
         var NewsSideBar = SideBar[4].split('</nav>')[0]
         var News = NewsSideBar.split('<li>')
         for (i = 1; i < News.length; i++) {
@@ -36,11 +36,11 @@ const getUpdates = async (factor) => {
 
             } catch (err) { }
         }
-    }else if(factor == 'status'){
+    } else if (factor == 'status') {
         var StatusSideBar = SideBar[3].split('</nav>')[0]
         var Status = StatusSideBar.split('<a class="')
-        for(i=1;i<Status.length;i++){
-            var status_link=Status[i].split('href="')[1].split('"')[0]
+        for (i = 1; i < Status.length; i++) {
+            var status_link = Status[i].split('href="')[1].split('"')[0]
             var status_name = Status[i].split('>')[1].split('<')[0]
             var status = Status[i].split("alt='new'").length
             result.push({

@@ -3,3 +3,4 @@ dist/
 worker/
 .vscode/tasks.json
 *.toml
+account_id.txt

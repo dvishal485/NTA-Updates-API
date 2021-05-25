@@ -1,29 +1,28 @@
 import getUpdates from './getUpdates'
 import header from './header'
 
-async function handleRequest(request) { /* Handle the incoming request */
+async function handleRequest(request) {
     const headers = header(request.headers)
-    const path = new URL(request.url).pathname; /* Get the pathname */
+    const path = new URL(request.url).pathname;
 
-    if (request.method == 'GET') { /* Respond for GET request method */
-        if (path.startsWith('/events')) { /* 
-             */
+    if (request.method == 'GET') {
+        if (path.startsWith('/events')) {
             return new Response(await getUpdates('events'), {
                 status: 200,
                 headers
             })
-        } else if (path.startsWith('/news')) { /* Product Page */
+        } else if (path.startsWith('/news')) {
             return new Response(await getUpdates('news'), {
                 status: 200,
                 headers
             })
-        }  else if (path.startsWith('/status')) { /* Product Page */
+        } else if (path.startsWith('/status')) {
             return new Response(await getUpdates('status'), {
                 status: 200,
                 headers
             })
         } else {
-            return new Response(JSON.stringify({ /* Extra curricular activities */
+            return new Response(JSON.stringify({
                 alive: true,
                 repository_name: 'JEE-Updates-API',
                 repository_description: 'JEE Updates API written in javascript to fetch latest data from JEE Mains website',
@@ -34,12 +33,7 @@ async function handleRequest(request) { /* Handle the incoming request */
                 headers
             })
         }
-    } else if (request.method === 'OPTIONS') { /* Respond for OPTIONS request method */
-        return new Response("", {
-            status: 200,
-            headers
-        })
-    } else { /* Respond for other request methods */
+    } else {
         return Response.redirect("https://github.com/dvishal485/JEE-Updates-API", 301)
     }
 }
