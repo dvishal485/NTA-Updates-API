@@ -1,11 +1,11 @@
 # JEE Updates API
 JEE Updates API written in javascript to fetch latest data from [JEE Mains Website](https://jeemain.nta.nic.in/webinfo2021)
 
-# Usage
-
 ![Guide for API Links](https://github.com/dvishal485/JEE-Updates-API/blob/main/guide.jpg?raw=true)
 
-- Current Events
+# Usage
+
+- ## Current Events
     - This usually contains the current ongoing events
     - API Link :
 
@@ -25,7 +25,7 @@ JEE Updates API written in javascript to fetch latest data from [JEE Mains Websi
 }
 ```
 
-- Latest Updates
+- ## Latest Updates
     - This usually includes the Admit Card and Result related content
     - API Link :
 
@@ -44,8 +44,8 @@ JEE Updates API written in javascript to fetch latest data from [JEE Mains Websi
 }
 ```
 
-- News & Events
-    -This usually includes the current events and news
+- ## News & Events
+    - This usually includes the current events and news
     - API Link :
 
     ```https://jee-updates-api.dvishal485.workers.dev/news```
