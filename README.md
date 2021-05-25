@@ -3,6 +3,8 @@ JEE Updates API written in javascript to fetch latest data from [JEE Mains Websi
 
 ![Guide for API Links](assets/guide.jpg)
 
+Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram based on this API
+
 # Usage
 
 ## Current Events
@@ -63,6 +65,7 @@ JEE Updates API written in javascript to fetch latest data from [JEE Mains Websi
 ### Note
   - The API is hosted with Cloudflare Worker and have a limit to its maximum ussage, do not misuse the API.
   - To check if the link is working properly, one may fetch the [link](https://jee-updates-api.dvishal485.workers.dev/) `https://jee-updates-api.dvishal485.workers.dev/` and look for the 'alive' status
+  - Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram based on this API
 
 ### Acknowledgement
 A special thanks to [@cyberboysumanjay's Repo](https://github.com/cyberboysumanjay/amazon-scraper) which inspired me for the project
