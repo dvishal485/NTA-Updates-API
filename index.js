@@ -1,4 +1,4 @@
-import events from './events'
+import getUpdates from './getUpdates'
 import header from './header'
 
 async function handleRequest(request) { /* Handle the incoming request */
@@ -8,15 +8,20 @@ async function handleRequest(request) { /* Handle the incoming request */
     if (request.method == 'GET') { /* Respond for GET request method */
         if (path.startsWith('/events')) { /* 
              */
-            return new Response(await events(request.headers.get("host")), {
+            return new Response(await getUpdates('events'), {
                 status: 200,
                 headers
             })
         } else if (path.startsWith('/news')) { /* Product Page */
-            return new Response("to be updated soon"), {
+            return new Response(await getUpdates('news'), {
                 status: 200,
                 headers
-            }
+            })
+        }  else if (path.startsWith('/status')) { /* Product Page */
+            return new Response(await getUpdates('status'), {
+                status: 200,
+                headers
+            })
         } else {
             return new Response(JSON.stringify({ /* Extra curricular activities */
                 alive: true,
