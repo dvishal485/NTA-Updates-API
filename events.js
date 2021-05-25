@@ -31,4 +31,4 @@ const events = async (host) => {
 }
 
 
-export default search
+export default events

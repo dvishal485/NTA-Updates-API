@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "name": "jee-updates-api",
+    "version": "1.0.0",
+    "description": "JEE Updates API written in javascript to fetch latest data from JEE Mains website",
+    "main": "index.js",
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler publish"
+    },
+    "author": "Vishal Das <dvishal485@gmail.com>",
+    "license": "GNU General Public License v3.0"
+}

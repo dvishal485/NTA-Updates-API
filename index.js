@@ -1,11 +1,13 @@
 import events from './events'
+import header from './header'
 
 async function handleRequest(request) { /* Handle the incoming request */
     const headers = header(request.headers)
     const path = new URL(request.url).pathname; /* Get the pathname */
 
     if (request.method === 'GET') { /* Respond for GET request method */
-        if (path.startsWith('/events')) { /* Search */
+        if (path.startsWith('/events')) { /* 
+             */
             return new Response(await events(request.headers.get("host")), {
                 status: 200,
                 headers
