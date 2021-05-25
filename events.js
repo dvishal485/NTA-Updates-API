@@ -1,15 +1,13 @@
 const events = async (host) => {
 
-    const jeeWebsite = await (await fetch(`https://jeemain.nta.nic.in`)).text()
-
+    const jeeWebsite = await (await fetch(`https://jeemain.nta.nic.in/webinfo2021`)).text()
     //var Box = jeeWebsite.split('<div class="boxdesignCurrentEvents">')
     var SideBar = jeeWebsite.split('<nav id="sidebar">')
-    var EventSideBar = SideBar.split('</nav>')[0]
-    var NewsSideBar = SideBar.split('</nav>')[3]
+    var EventSideBar = SideBar[1].split('</nav>')[0]
     var Events = EventSideBar.split('<li>')
 
-    var i, result = [];
-    for (i = 1; i < Events.length; i++) { /* (type 1) */
+   var i, result = [];
+    for (i = 1; i < Events.length; i++) {
         try {
             var event_link = Events[i].split('<a href="')[1].split('"')[0]
             var status =  Events[i].split("alt='new'").length
@@ -21,8 +19,8 @@ const events = async (host) => {
                 })
             
         } catch (err) { }
-    }
 
+    }
     return JSON.stringify({
         status: true,
         total_result: result.length,
