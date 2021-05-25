@@ -11,7 +11,7 @@ async function handleRequest(request) { /* Handle the incoming request */
                 headers
             })
         } else if (path.startsWith('/news')) { /* Product Page */
-            return new Response(await product(request.headers.get("host"))), {
+            return new Response("to be updated soon"), {
                 status: 200,
                 headers
             }
