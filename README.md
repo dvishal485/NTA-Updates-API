@@ -68,4 +68,4 @@ Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram base
   - Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram based on this API
 
 ### Acknowledgement
-A special thanks to [@cyberboysumanjay's Repo](https://github.com/cyberboysumanjay/amazon-scraper) which inspired me for the project
+A special thanks to [Tuhin Kanti Pal's Project ](https://github.com/cachecleanerjeet/amazon-scraper) which inspired me for the project
