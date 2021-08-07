@@ -1,6 +1,9 @@
 # JEE Updates API
 JEE Updates API written in javascript to fetch latest data from [JEE Mains Website](https://jeemain.nta.nic.in/webinfo2021)
 
+## Special Note
+The API is not specifically for JEE Mains only, but for all websites managed by NTA including JEE Mains, NEET, CMAT, UGCNET and many more. To make it work, one just need to change the URL in the API files and keeping remaining code unchanged.
+
 ![Guide for API Links](assets/guide.jpg)
 
 Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram based on this API
