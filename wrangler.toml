@@ -1,6 +1,6 @@
 name = "jee-updates-api"
 type = "webpack"
-account_id = "c07aff6cddf66acdb7392db60251d620"
+account_id = ""
 workers_dev = true
 route = ""
 zone_id = ""

@@ -68,6 +68,23 @@ Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram base
   - API Link :
 `https://jee-updates-api.dvishal485.workers.dev/special`
   - Response Example :
+```json
+[
+  {
+    "highlights": [],
+    "links": [
+      {
+        "name": "Information Bulletin",
+        "url": "https://jeemain.nta.nic.in/webinfo2021/File/GetFile?FileId=1&amp;LangId=P"
+      },
+      {
+        "name": "NATIONAL TESTING AGENCY JEE (Main) Session - 3,2021 FINAL ANSWER KEY ON WHICH RESULT COMPILEDON06.08.2021",
+        "url": "https://jeemain.nta.nic.in/webinfo2021/File/GetFile?FileId=55&amp;LangId=P"
+      }
+    ]
+  }
+]
+```
 
 ### Note
   - The API is hosted with Cloudflare Worker and have a limit to its maximum usage, do not misuse the API.
