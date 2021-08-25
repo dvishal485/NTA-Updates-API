@@ -1,11 +1,27 @@
 import header from './header'
 
-const getUpdates = async (factor) => {
+const getUpdates = async (factor, website) => {
     const headers = header()
-    const url = `https://jeemain.nta.nic.in/webinfo2021`
-    const dataWeb = await (await fetch(url)).text()
-    var jeeWebsite = dataWeb.replace(/\s{2,}/g, '').trim()
-    var SideBar = jeeWebsite.split('<nav id="sidebar">')
+    var url = `https://jeemain.nta.nic.in/webinfo2021`
+    switch (website.toLowerCase()) {
+        case 'jeemain':
+        case 'jee':
+            url = `https://jeemain.nta.nic.in/webinfo2021`
+            break;
+        case 'neet':
+            url = `https://${website.toLowerCase()}.nta.nic.in`
+            break;
+        case 'arpit':
+        case 'cucet':
+            url = `https://${website.toLowerCase()}.nta.nic.in/WebInfoCms/Page/Page?PageId=1&LangId=P`
+            break;
+        default:
+            url = `https://${website.toLowerCase()}.nta.nic.in/webinfo`
+    }
+    var dataWeb = await fetch(url, { redirect: 'follow' })
+    dataWeb = await dataWeb.text()
+    var WebsiteHtml = dataWeb.replace(/\s{2,}/g, '').trim()
+    var SideBar = WebsiteHtml.split('<nav id="sidebar">')
     var i, result = [];
     try {
         if (factor == 'events') {
@@ -53,12 +69,12 @@ const getUpdates = async (factor) => {
             }
 
         } else if (factor == 'special') {
-            var topics = jeeWebsite.split('<legend')
+            var topics = WebsiteHtml.split('<legend')
             var highlights = []
             for (var i = 1; i < topics.length; i++) {
                 highlights.push(lastEntry(topics[i].split('</legend>')[0].split('>')))
             }
-            var link = jeeWebsite.split('<a')
+            var link = WebsiteHtml.split('<a')
             var links = []
             for (var i = 1; i < link.length; i++) {
                 var nameTosend = lastEntry(link[i].split('</a>')[0].replace(/alt="new">/g, '').split('>')).split('<')[0].trim()

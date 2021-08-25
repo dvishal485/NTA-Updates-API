@@ -1,10 +1,18 @@
-# JEE Updates API
-JEE Updates API written in javascript to fetch latest data from [JEE Mains Website](https://jeemain.nta.nic.in/webinfo2021)
-
-## Special Note
-The API is not specifically for JEE Mains only, but for all websites managed by NTA including JEE Mains, NEET, CMAT, UGCNET and many more. To make it work, one just need to change the URL in the API files and keeping remaining code unchanged.
+# NTA Updates API
+NTA Updates API written in javascript to fetch latest data from website developed by NTA including [JEE Main](https://jeemain.nta.nic.in), [NEET](https://neet.nta.nic.in), [CMAT](https://cmat.nta.nic.in) and many more!
 
 ![Guide for API Links](assets/guide.jpg)
+
+## Supported Examination Websites
+- [JEE Main](https://jeemain.nta.nic.in) ( Exam Code : `jee` )
+- [NEET](https://neet.nta.nic.in) ( Exam Code : `neet` )
+- [NCHMJEE](https://nchmje.nta.nic.in) ( Exam Code : `nchmjee` )
+- [IIFT](https://cmat.nta.nic.in) ( Exam Code : `iift` )
+- [ARPIT](https://arpit.nta.nic.in) ( Exam Code : `arpit` )
+- [CUCET](https://cucet.nta.nic.in/) ( Exam Code : `cucet` )
+- [UGCNET](https://ugcnet.nta.nic.in/) ( Exam Code : `ugcnet` )
+- [CSIRNET](https://csirnet.nta.nic.in/) ( Exam Code : `csirnet` )
+- [GPAT](https://gpat.nta.nic.in) ( Exam Code : `gpat` )
 
 Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram based on this API
 
@@ -13,7 +21,7 @@ Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram base
 ## Current Events
   - This usually contains the current ongoing events
   - API Link :
-`https://jee-updates-api.dvishal485.workers.dev/events`
+`https://nta.dvishal485.workers.dev/{exam_code}/events`
   - Response Example :
 
 ```json
@@ -34,7 +42,7 @@ Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram base
 ## Latest Updates
   - This usually includes the Admit Card and Result related content
   - API Link :
-`https://jee-updates-api.dvishal485.workers.dev/status`
+`https://nta.dvishal485.workers.dev/{exam_code}/status`
   - Response Example :
 ```json
  [
@@ -49,7 +57,7 @@ Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram base
 ## News & Events
   - This usually includes the current events and news
   - API Link :
-`https://jee-updates-api.dvishal485.workers.dev/news`
+`https://nta.dvishal485.workers.dev/{exam_code}/news`
   - Response Example :
 ```json
 [
@@ -69,7 +77,7 @@ Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram base
 ## Link Capture
   - This should be used if the website is changed for some certain amount of time for special purpose such as result uploading. This will capture all the links (including the hidden links) present in website which may contain important updates regarding Result / Admit Card release.
   - API Link :
-`https://jee-updates-api.dvishal485.workers.dev/special`
+`https://nta.dvishal485.workers.dev/{exam_code}/special`
   - Response Example :
 ```json
 [
@@ -91,5 +99,5 @@ Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram base
 
 ### Note
   - The API is hosted with Cloudflare Worker and have a limit to its maximum usage, do not misuse the API.
-  - To check if the link is working properly, one may fetch the [link](https://jee-updates-api.dvishal485.workers.dev/) `https://jee-updates-api.dvishal485.workers.dev/` and look for the 'alive' status
+  - To check if the link is working properly, one may fetch the [link](https://nta.dvishal485.workers.dev/{exam_code}) `https://nta.dvishal485.workers.dev/{exam_code}` and look for the 'alive' status
   - Must check out [@jee_updates_bot](https://t.me/jee_updates_bot) on Telegram based on this API
