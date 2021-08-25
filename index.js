@@ -6,7 +6,7 @@ async function handleRequest(request) {
     var path = new URL(request.url).pathname;
 
     if (request.method == 'GET') {
-        var website = `jee`
+        var website = `jeemain`
         if (path.split('/').length > 2) {
             website = path.split('/')[1].toLowerCase()
             path = `/${path.split('/')[2]}`.toLowerCase()
@@ -29,7 +29,7 @@ async function handleRequest(request) {
                 version: '1.1.0',
                 exam_code: website,
                 repository_description: 'NTA Updates API written in javascript to fetch latest data from NTA managed website',
-                repository_url: 'https://github.com/dvishal485/JEE-Updates-API',
+                repository_url: 'https://github.com/dvishal485/NTA-Updates-API',
                 made_by: 'https://github.com/dvishal485',
                 api_endpoints: {
                     'events': 'https://nta.dvishal485.workers.dev/{exam_code}/events',
@@ -43,7 +43,7 @@ async function handleRequest(request) {
             })
         }
     } else {
-        return Response.redirect("https://github.com/dvishal485/JEE-Updates-API", 301)
+        return Response.redirect("https://github.com/dvishal485/NTA-Updates-API", 301)
     }
 }
 

@@ -4,7 +4,7 @@ NTA Updates API written in javascript to fetch latest data from website develope
 ![Guide for API Links](assets/guide.jpg)
 
 ## Supported Examination Websites
-- [JEE Main](https://jeemain.nta.nic.in) ( Exam Code : `jee` )
+- [JEE Main](https://jeemain.nta.nic.in) ( Exam Code : `jee` or `jeemain`)
 - [NEET](https://neet.nta.nic.in) ( Exam Code : `neet` )
 - [NCHMJEE](https://nchmje.nta.nic.in) ( Exam Code : `nchmjee` )
 - [IIFT](https://cmat.nta.nic.in) ( Exam Code : `iift` )
